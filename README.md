@@ -1,4 +1,4 @@
-# 🎵 Lissandro
+# 🎵 Discord Music Bot + Dashboard
 
 Bot de música para Discord com dashboard web no GitHub Pages.
 
