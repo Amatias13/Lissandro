@@ -17,12 +17,10 @@ discord-music-bot/
 ## 1. Configurar o Bot (bot.py)
 
 ### Pré-requisitos
-
 - Python 3.8+
 - FFmpeg instalado no sistema
 
 **Instalar FFmpeg:**
-
 ```bash
 # Windows
 winget install Gyan.FFmpeg
@@ -35,7 +33,6 @@ sudo apt install ffmpeg
 ```
 
 **Instalar dependências Python:**
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -43,13 +40,11 @@ pip install -r requirements.txt
 ### Configurar variáveis de ambiente
 
 Copia o ficheiro de exemplo:
-
 ```bash
 cp .env.example .env
 ```
 
 Edita o `.env`:
-
 ```env
 DISCORD_TOKEN=o_teu_token_do_discord_aqui
 API_SECRET=escolhe-uma-chave-secreta-unica
@@ -59,13 +54,11 @@ API_SECRET=escolhe-uma-chave-secreta-unica
 > Adiciona `.env` ao `.gitignore`.
 
 ### Correr o bot
-
 ```bash
 python bot.py
 ```
 
 Verás no terminal:
-
 ```
 ✅ Bot ligado: NomeDoBot#1234
 🌐 API a correr em http://localhost:5000
@@ -79,21 +72,17 @@ Verás no terminal:
 O GitHub Pages é um site externo — precisas que a tua API seja acessível pela internet.
 
 ### Opção A — ngrok (mais fácil, para testes)
-
 ```bash
 # Instalar ngrok: https://ngrok.com/download
 ngrok http 5000
 ```
-
 O ngrok dá-te um URL tipo `https://abc123.ngrok-free.app`.  
 Usa esse URL na dashboard.
 
 ### Opção B — VPS (Railway, Fly.io, DigitalOcean)
-
 Faz deploy do `bot.py` numa VPS. O URL será o IP/domínio público da VPS na porta 5000.
 
 ### Opção C — Router (IP fixo em casa)
-
 Faz port forwarding da porta 5000 no teu router para o teu PC.  
 Usa o teu IP público como URL.
 
@@ -123,15 +112,15 @@ As credenciais ficam guardadas no `localStorage` do browser — não precisas de
 
 ## Comandos do Bot (via Discord)
 
-| Comando              | Alias  | Descrição               |
-| -------------------- | ------ | ----------------------- |
-| `!play [música/URL]` | `!p`   | Toca ou adiciona à fila |
-| `!skip`              | `!s`   | Salta para a próxima    |
-| `!pause`             | —      | Pausa a música          |
-| `!resume`            | —      | Continua após pausa     |
-| `!stop`              | —      | Para e desliga do canal |
-| `!queue`             | `!q`   | Mostra a fila           |
-| `!volume [0-200]`    | `!vol` | Ajusta o volume         |
+| Comando | Alias | Descrição |
+|---------|-------|-----------|
+| `!play [música/URL]` | `!p` | Toca ou adiciona à fila |
+| `!skip` | `!s` | Salta para a próxima |
+| `!pause` | — | Pausa a música |
+| `!resume` | — | Continua após pausa |
+| `!stop` | — | Para e desliga do canal |
+| `!queue` | `!q` | Mostra a fila |
+| `!volume [0-200]` | `!vol` | Ajusta o volume |
 
 O prefixo pode ser alterado na dashboard em **Definições**.
 
