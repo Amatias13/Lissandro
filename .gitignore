@@ -7,3 +7,5 @@ venv/
 env/
 bot.py
 requirements.txt
+start.bat
+stop.bat
